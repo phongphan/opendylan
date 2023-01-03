@@ -34,6 +34,12 @@ case $host in
       SUPPORT_LLVM=yes
       shrext=dylib
     ;;
+  aarch64-*-darwin*)
+      OPEN_DYLAN_TARGET_PLATFORM="aarch64-darwin";
+      MACOS_SDK=`xcrun --show-sdk-path`
+      SUPPORT_LLVM=yes
+      shrext=dylib
+    ;;
   amd64-*-freebsd* | x86_64-*-freebsd*)
       OPEN_DYLAN_TARGET_PLATFORM=x86_64-freebsd;
       BDW_GC_MODULE=bdw-gc-threaded
